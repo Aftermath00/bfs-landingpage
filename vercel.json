@@ -8,8 +8,8 @@
         "dest": "/static/$1"
       },
       {
-        "src": "^/favicon.ico",
-        "dest": "/favicon.ico"
+        "src": "^/bfs.ico",
+        "dest": "/bfs.ico"
       },
       {
         "src": "^/manifest.json",

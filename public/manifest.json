@@ -5,7 +5,13 @@
     {
       "src": "bfs.svg",
       "type": "image/svg+xml",
-      "sizes": "any"
+      "sizes": "any",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "bfs.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
     }
   ],
   "start_url": ".",
