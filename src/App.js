@@ -4,18 +4,19 @@ import satu from './svg/1.svg';
 import dua from './svg/2.svg';
 import tiga from './svg/3.svg';
 import empat from './svg/4.svg';
-import logo from './logo.svg'
 import laptop from './svg/mac.svg';
-import baarak from './svg/bar.svg';
-import rizky from './svg/ki.svg';
-import farrel from './svg/rel.svg';
-import nadhirul from './svg/nad.svg';
-import dicky from './svg/dik.svg';
-import buttonDownload from './svg/available.svg';
+import baarak from './svg/baarakFoto.svg';
+import rizky from './svg/rizkyFoto.svg';
+import farrel from './svg/farrelFoto.svg';
+import nadhirul from './svg/nadhirulFoto.svg';
+import dicky from './svg/dickyFoto.svg';
 import hp from './svg/hp.svg';
 import video from './mp4/StoryVideo.mp4';
 import videodemo from './svg/gameplay.svg';
 import videodemoBg from './svg/bg.svg';
+import insta from './svg/instagram.svg';
+import line from './svg/lineSVG.svg';
+import logo from './svg/bfs.svg';
 import Navbar from './Navbar';
 
 
@@ -32,14 +33,13 @@ function App() {
         <source src={video} type="video/mp4" />
         Your browser does not support the video tag.
         </video>
-        {/* <img src={logo} alt="Overlay" className="header-image" /> */}
       </header>
 
       {/* Main Content */}
       <main className="main-content">
         {/* Game Description */}
         <section id="description" className="description">
-        <div style={{ height: '60px', marginTop: '-60px' }} id="how-to-play-offset"></div>
+        <div style={{ height: '60px', marginTop: '-60px' }} id="description-offset"></div>
           <h1>Bender Force Saga</h1>
           <h2>Arcade experience at home.</h2>
           <p>
@@ -56,7 +56,7 @@ function App() {
 
         {/* Features Section */}
         <section id="features" className="features">
-        <div style={{ height: '80px', marginTop: '-80px' }} id="how-to-play-offset"></div>
+        <div style={{ height: '80px', marginTop: '-80px' }} id="features-offset"></div>
           <h2>Expensive Experience For Free!</h2>
           <div className="feature">
           <div className='featureContent'>
@@ -126,7 +126,7 @@ function App() {
 
         {/* Video Demo Section */}
         <section id='videodemos' className="videodemos">
-        <div style={{ height: '320px', marginTop: '-320px' }} id="how-to-play-offset"></div>
+        <div style={{ height: '280px', marginTop: '-280px' }} id="videodemos-offset"></div>
           <div className="videodemo">
             <a
             className="App-link"
@@ -134,14 +134,20 @@ function App() {
             target="_blank"
             rel="noopener noreferrer"
             >
-            <img src={videodemo} alt="videodemo" />
+            <img src={videodemo} alt="videodemo" className="videodemoView"/>
             </a>
             <div className='videodemoContent'>
               <h2>Bender Force Saga Demo</h2>
               <p>
               In this exclusive demo, see how Bender Force Saga lets you control the game with physical gestures using your iPhone as the controller.            
               </p>
-              {/* <img src={buttonvideodemo} alt="buttonVideoDemo" className="buttonVideoDemo" /> */}
+              <button
+              className="buttonVideoDemo"
+              onClick={() => window.open('https://youtu.be/D8se5_odq2Y?si=aOrNm4hwGjE3-xdf', '_blank')}
+              >
+              Watch Demo
+              </button>
+
             </div>
           </div>
           <img src={videodemoBg} alt="videodemoBackground" className='videodemoBackground'/>
@@ -149,16 +155,12 @@ function App() {
           <div className="spacer"></div>
 
 
-
-
       {/* Main Content */}
       <main className="main-content">
       <div className="spacer"></div>
-
-
         {/* About Section */}
         <section id="about" className="about">
-        <div style={{ height: '300px', marginTop: '-300px' }} id="how-to-play-offset"></div>
+        <div style={{ height: '320px', marginTop: '-320px' }} id="about-offset"></div>
           <h2>About This Game</h2>
           <p>Bender Force Saga is developed by Motio Studio, a small team from Indonesia in Apple Developer Academy @IL 2024.</p>
           <div className="numbers">
@@ -175,27 +177,61 @@ function App() {
 
         {/* Available Now Section */}
         <section id="available-now" className="available-now">
-        <div style={{ height: '320px', marginTop: '-320px' }} id="how-to-play-offset"></div>
+        <div style={{ height: '320px', marginTop: '-320px' }} id="available-now-offset"></div>
           <h2>Available Now!</h2>
           <p>
           The wait is over—Bender Force Saga is here! Dive into an epic adventure where your movements control the action. With groundbreaking gameplay that turns your iPhone into a seamless controller, experience the thrill of unleashing elemental powers and defending Kodonia like never before. Don't just play—become the hero. Download now on the App Store and join the fight to restore harmony in this one-of-a-kind immersive game. Kodonia needs you!          </p>
           <div className="store-buttons">
           <a
           className="App-link"
+          href="https://testflight.apple.com/join/CWc8euxS"
+          target="_blank"
+          rel="noopener noreferrer"
+          >
+          <p>Bender Force Saga (MacOS)</p>
+          </a>
+          <a
+          className="App-link"
           href="https://testflight.apple.com/join/w9jRVJzG"
           target="_blank"
           rel="noopener noreferrer"
-        >
-          <img src={buttonDownload}/>
+          >
+          <p>DetAction (iOS)</p>
           </a>
           </div>
         </section>
 
-    
-
         <div className="spacer"></div>
 
       </main>
+
+      <section id="footer" className="footerContainer">
+        <div className="footer">
+            <div className="subFooter">
+            <p>Realeased</p>
+            <h2>2024</h2>
+            </div>
+
+            <div className="subFooter">
+            <p>Developer</p>
+            <h2>Motio Studio</h2>
+            </div>
+            
+            <div className="footerIcons">
+            <button
+              className="buttonInsta"
+              onClick={() => window.open('https://www.instagram.com/motiostudios/?utm_source=ig_web_button_share_sheet', '_blank')}
+              >
+            <img src={insta} alt="Line" className="navbarImageInsta"/>
+            </button>
+            <img src={line} alt="Line" className="navbarImageLine"/>
+            <img src={logo} alt="Line" className="navbarImageLogo"/>
+            </div>
+
+          </div>
+          </section>
+
+        <div className="spacer"></div>
     </div>
   );
 }
